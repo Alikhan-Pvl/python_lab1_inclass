@@ -10,16 +10,16 @@ print(4,8,15,16,23,42,sep='\n')#1,2 exercise
 m=int(input())
 
 print(m,m+1,m+2,sep=' ')#1,3 exercise
-
-m1=int(input())#1,4 exercise
-m2=int(input())
-m3=int(input())
-print(m1+m2+m3)
-
-num=int(input())    #1,5 exercise
+try:
+    m1=int(input())#1,4 exercise
+    m2=int(input())
+    m3=int(input())
+    print(m1+m2+m3)
+exeption:ValueError:    print('please try again)
+try:     num=int(input())    #1,5 exercise
 print("Volume = ",num*num*num)
 print('Volume = ',num*num*6)
-
+exeption:ValueError
 N = int(input("Enter the number of schoolchildren: "))  #2,1 exercise
 K = int(input("Enter the number of tangerines: "))
 
