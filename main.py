@@ -1,72 +1,97 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
 print(4,8,15,16,23,42,sep=' ',end='\n') #1,1 exercise
 
-print(4,8,15,16,23,42,sep='\n')#1,2 exercise
-m=int(input())
 
-print(m,m+1,m+2,sep=' ')#1,3 exercise
-try:
-    m1=int(input())#1,4 exercise
+
+print(4,8,15,16,23,42,sep='\n')#1,2 exercise
+
+
+
+try:        #1,3 exercise
+    m=int(input())
+
+    print(m,m+1,m+2,sep=' ')
+except ValueError : 
+    print('please try again')
+
+
+
+
+try:        #1,4 exercise
+    m1=int(input())
     m2=int(input())
     m3=int(input())
     print(m1+m2+m3)
-exeption:ValueError:    print('please try again)
-try:     num=int(input())    #1,5 exercise
-print("Volume = ",num*num*num)
-print('Volume = ',num*num*6)
-exeption:ValueError
-N = int(input("Enter the number of schoolchildren: "))  #2,1 exercise
-K = int(input("Enter the number of tangerines: "))
-
-whole_tangerines_per_student = K // N
-remainder_tangerines = K % N
-print("Each student will get", whole_tangerines_per_student, "whole tangerines.")
-print("There will be", remainder_tangerines, "whole tangerines remaining in the basket.")
+except ValueError : 
+    print('please try again')
 
 
-number = int(input("Enter a four-digit number: ")) #2,2 exercise
+
+try:      #1,5 exercise
+    num=int(input())   
+    print("Volume = ",num*num*num)
+    print('Volume = ',num*num*6)
+except ValueError :
+    print('please try again')
 
 
-if 1000 <= number <= 9999:
+
+try:        #2,1 exercise
+    N = int(input("Enter the number of schoolchildren: "))  
+    K = int(input("Enter the number of tangerines: "))
+
+    whole_tangerines_per_student = K // N
+    remainder_tangerines = K % N
+    print("Each student will get", whole_tangerines_per_student, "whole tangerines.")
+    print("There will be", remainder_tangerines, "whole tangerines remaining in the basket.")
+except ValueError :
+    print('please try again')
+
+
+
+
+try: #2,2 exercise
+    number = int(input("Enter a four-digit number: ")) 
+
+    if 1000 <= number <= 9999:
     # Extract individual digits
-    thousands_digit = number // 1000
-    hundreds_digit = (number // 100) % 10
-    tens_digit = (number // 10) % 10
-    ones_digit = number % 10
+        thousands_digit = number // 1000
+        hundreds_digit = (number // 100) % 10
+        tens_digit = (number // 10) % 10
+        ones_digit = number % 10
+
+        print("Thousands digit:", thousands_digit)
+        print("Hundreds digit:", hundreds_digit)
+        print("Tens digit:", tens_digit)
+        print("Ones digit:", ones_digit)
+    else:
+        print("Please enter a valid four-digit number.")
+except ValueError :
+    print('please try again')
 
 
-    print("Thousands digit:", thousands_digit)
-    print("Hundreds digit:", hundreds_digit)
-    print("Tens digit:", tens_digit)
-    print("Ones digit:", ones_digit)
-else:
-    print("Please enter a valid four-digit number.")
 
-total_peop=int(input('total nimber is '))   #2,3 exercise
-survive=total_peop/2
-print(int(round(survive)),' people survive')
 
-try:                                         #2,4 exercise
+try:        #2,3 exercise
+    total_peop=int(input('total nimber is '))   
+    survive=total_peop/2
+    print(int(round(survive)),' people survive')
+except ValueError :
+    print('please try again')
+
+
+
+
+try:                   #2,4 exercise
     num = int(input("Enter a number: "))
+    result = num << 1
+    if result == 0:
+        print("Warning: The result of << is zero.")
+    else:
+        print("The result of << is ", result)
 except ValueError:
     print("Invalid input. Please enter a valid number.")
-    exit()
-
-
-result = num << 1
-
-
-if result == 0:
-    print("Warning: The result of << is zero.")
-else:
-    print("The result of << is ", result)
-
-
 
 
 
