@@ -107,19 +107,33 @@ def subtraction(num1, num2):
 def multiplication(num1, num2):
     return num1 * num2
 
+
+
+b='please write anither second number'
+
+def square (num1, num2):
+  
+   try:
+   
+       return num1 ** (1/num2)
+   except ZeroDivisionError:
+       
+       return b
+
+
 # Function to perform division
 def division(num1, num2):
     if num2 == 0:
         return "Error: Division by zero"
     return num1 / num2
-
+result= None
 try:
     # Prompt the user to enter two numbers
     num1 = float(input("Please enter the first number: "))
     num2 = float(input("Please enter the second number: "))
 
     # Prompt the user to choose an operation
-    operation = input("Please choose the operation (+, -, *, /): ")
+    operation = input("Please choose the operation (+, -, *, /, in 'sqrt' Number 1 is subcortical number and Number 2 is root indicator ): ")
 
     # Perform the selected operation based on user input
     if operation == '+':
@@ -130,11 +144,14 @@ try:
         result = multiplication(num1, num2)
     elif operation == '/':
         result = division(num1, num2)
+    elif operation == 'sqrt':
+        result = square(num1,num2)
+       
     else:
         result = "Invalid operation choice"
 
     # Display the result or an error message
-    print("Result: ", round(result,3))
+    print("Result: ", result)
 
 except ValueError:
     print("Invalid input. Please enter valid numbers.")
