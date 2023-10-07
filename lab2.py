@@ -358,3 +358,38 @@ try:             #there i call Triangle function
     a=Triangle()
 except:
     print()
+
+
+
+
+def elefant():
+    try:
+
+        row=input("write where stay elefant row: ")
+        rowINT=int(row)
+        column=int(input("write where stay elefant column: "))
+        if rowINT>9 or column>9:
+            print('please write real coordinates and try again or write "stop" to exit this programm','\n' )
+            return elefant()
+        else:
+            num1=int(input("write where elefant go in row: "))
+            num2=int(input("write where elefant go in column: "))
+            if num1>9 or num2>9:
+                print('please write real coordinates and try again or write "stop" to exit this programm','\n' )
+                return elefant()
+
+        if abs(rowINT-num1)==abs(column-num2):
+            print('YES','\n')
+        else:
+            print('NO','\n')
+
+    except ValueError :
+        print('please try again or write "stop" to exit this programm','\n')
+        if row=='stop':
+            exit()
+        return elefant()
+    
+try:             #there i call elefant function 
+    a=elefant()
+except:
+    print()
